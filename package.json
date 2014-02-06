@@ -1,0 +1,17 @@
+{
+  "name": "sweet.js-tutorials",
+  "description": "A collection of sweet.js tutorials",
+  "version": "1.0.0",
+  "author": "James Long <longster@gmail.com>",
+  "devDependencies": {
+    "sweet.js": "~0.4.1",
+    "grunt-sweet.js": "~0.1.4",
+    "source-map-support": "~0.2.5",
+    "grunt": "~0.4.2",
+    "grunt-contrib-watch": "~0.5.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jlongster/sweet.js-tutorials"
+  }
+}
