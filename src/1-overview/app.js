@@ -6,6 +6,12 @@
 // your first macro, basics of pattern matching, and how to run the
 // sweet.js compiler and use sourcemaps for debugging.
 //
+// All of these tutorials will be available as JavaScript in literate
+// code form on github at my
+// [sweet.js-tutorials](https://github.com/jlongster/sweet.js-tutorials)
+// repo. You can run them from the CLI and go through them there if
+// you want.
+//
 // I recommend you read the [article introducing this
 // series](http://jlongster.com/Stop-Writing-JavaScript-Compilers--Make-Macros-Instead)
 // if you don't know much about sweet.js and JavaScript macros. I
@@ -358,6 +364,7 @@ var x = 6;
 foo y = 10;
 var y = 11;
 
+// id=hygiene
 //
 // In the above example, The first 2 cases create 2 different
 // variables because the macro itself created an `x` which is
