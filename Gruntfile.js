@@ -13,9 +13,9 @@ module.exports = function(grunt) {
                 files: [{
                     expand: true,
                     cwd: 'src/',
-                    src: ['**/*.js'],
+                    src: ['**/*.sjs'],
                     dest: 'src/',
-                    ext: '.build.js'
+                    ext: '.js'
                 }]
             }
         },
@@ -24,7 +24,7 @@ module.exports = function(grunt) {
                 nospawn: true
             },
             sweetjs: {
-                files: ['src/**/*.js'],
+                files: ['src/**/*.sjs'],
                 tasks: ['sweetjs:changed']
             }
         }
