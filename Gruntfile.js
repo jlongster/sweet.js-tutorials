@@ -33,7 +33,7 @@ module.exports = function(grunt) {
     grunt.event.on('watch', function(action, filepath, target) {
         if(action == 'changed' && target == 'sweetjs') {
             var base = filepath.slice(0, filepath.length - path.extname(filepath).length);
-            var dest = base + '.build.js';
+            var dest = base + '.js';
 
             grunt.config.set('sweetjs.changed.src', [filepath]);
             grunt.config.set('sweetjs.changed.dest', dest);
