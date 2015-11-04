@@ -155,7 +155,7 @@ However, if you <a href="#var3" data-editor-change="rec1">remove the <code>var</
 
 Ideally our macro should expand to a single `var` statement like `var arr = expr, i = 0, x = arr[i++]` instead of multiple `var` statements. Our current macro won't work in `for` and `while` statements (`for(var [x, y] = arr; x<10; x++) {}`) because multiple statements are invalid there. Unfortunately, we would need to recursively invoke a macro in the `var` binding place but we can't do that as explained above. The macro would look like `var destruct_array arr i [ $pattern ... , END ]`, but you can't do that.
 
-Let's continue working on the destructuring macro and add support for nested destructuring. You should be able to do `var [x, [y, z]] = arr` but our macro doesn't handle that. Because we of recursive macros, it turns out to be really easy to add that. All we need to do is relax the accepted token type in `destruct_array` to accept anything (`$var:id` was changed to `$first`) and switch the order of macros.
+Let's continue working on the destructuring macro and add support for nested destructuring. You should be able to do `var [x, [y, z]] = arr` but our macro doesn't handle that. Because we have recursive macros, it turns out to be really easy to add that. All we need to do is relax the accepted token type in `destruct_array` to accept anything (`$var:id` was changed to `$first`) and switch the order of macros.
 
 <div class="macro-editor" id="var4">let var = macro {
   rule { [ $pattern ...] = $obj:expr } => {

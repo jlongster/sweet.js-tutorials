@@ -153,7 +153,7 @@ Repeated patterns allow you to capture multiple instances of a pattern at a time
 
 A basic example: `rule { ($name ...) } => { $name ... }`. This matches all the syntax within the parentheses, and strips the parentheses in the output.
 
-A repeated pattern matches 0 or more times, so you can't use it enforce the existance of a pattern. In this sense, it will *always* match, even if the match is nothing.
+A repeated pattern matches 0 or more times, so you can't use it to enforce the existence of a pattern. In this sense, it will *always* match, even if the match is nothing.
 
 ```js
 macro basic {
@@ -212,7 +212,7 @@ var y = 11;</div>
 
 In the above example, The first 2 cases create 2 different variables because the macro itself created an `x` which is different than the `x` I made with `var`. In the last 2 cases, both reference the same `y` because I passed it in to the macro. 
 
-Hygienic renaming is the reason you see a variable like `foo` renamed to 'foo$1234'. sweet.js ensures that each variable is referencing the correct thing. It must rename all variables for reasons explain in [this post](http://disnetdev.com/blog/2013/09/27/hygiene-in-sweet.js/). Unfortunately that means all your identifiers become a little ugly, but if you pass the `-r` or "readable names" options to the sweet.js compiler, it will clean that up and most of it will be pretty again. That only works on ES5 code right now, which is why it's not on by default.
+Hygienic renaming is the reason you see a variable like `foo` renamed to 'foo$1234'. sweet.js ensures that each variable is referencing the correct thing. It must rename all variables for reasons explained in [this post](http://disnetdev.com/blog/2013/09/27/hygiene-in-sweet.js/). Unfortunately that means all your identifiers become a little ugly, but if you pass the `-r` or "readable names" options to the sweet.js compiler, it will clean that up and most of it will be pretty again. That only works on ES5 code right now, which is why it's not on by default.
 
 ## Using the sweet.js Compiler
 
